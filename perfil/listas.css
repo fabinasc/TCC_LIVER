@@ -1,0 +1,93 @@
+/* Estilos para a seção geral (.geral) */
+.geral {
+  background-color: black; /* Define a cor de fundo */
+  color: white; /* Define a cor do texto */
+  outline: none; /* Remove a borda de foco ao clicar */
+  box-sizing: border-box; /* Adota a modelagem de caixa */
+  min-height: 100vh; /* Garante que a altura mínima seja 100% da altura da viewport */
+  margin: 0; /* Remove as margens padrão */
+}
+
+/* Estilos para a barra de navegação (.navbar) */
+.navbar {
+  position: fixed; /* Fixa a barra de navegação na parte superior da página */
+  top: 0; /* Define a posição no topo da viewport */
+  z-index: 1000; /* Adiciona um índice Z alto para estar acima de outros elementos */
+  width: 100%; /* Define a largura total */
+  left: 0; /* Define a posição à esquerda */
+}
+
+/* Estilos para o contêiner da navegação (.container-nav) */
+.container-nav {
+  margin-left: 15%; /* Adiciona margem à esquerda */
+}
+
+
+.title{
+  text-align: center;
+  font-size: 4.5vh;
+letter-spacing: 2px;
+  
+}
+
+
+.row.justify-content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-md-4 {
+  flex: 0 0 calc(33.333% - 15px);
+  padding: 15px;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.col-md-4:hover {
+  transform: scale(1.1);
+}
+
+.album-title {
+  font-size: 2.5vh;
+  font-weight: bold;
+}
+
+.status-img {
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 10px;
+  width: 55%;
+  height: 100%;
+}
+
+.verdps {
+  background-color: #37384b;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.verdps:hover {
+  background-color: #c82333;
+}
+
+
+.favsR  {
+  background-color: #37384b;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.favsR:hover {
+  background-color: #c82333;
+}
