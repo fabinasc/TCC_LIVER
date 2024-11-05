@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="icon" href="./public/logo2_liver.png" type="image/x-icon">
+    <title>Cadastro</title>
+
+       <!--Inserindo o bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script> 
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
+   
+
+
+
+  <body>
+<div class="container-fluid">
+  <!--NAVBAR-->
+  <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark w-100">
+  <div class="container">
+      <a class="navbar-brand">
+          <img src="./public/liver_logo.png" alt="Logo LiVer" src="../index.php" width="100" height="40"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse me-auto y-2 my-lg-0" id="navbarScroll">
+      <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+          <a class="nav-link" href="../index.php">Início</a>
+          </li>
+          <li><hr class="dropdown-divider"></li>
+          <li class="nav-item">
+          <a class="nav-link" href="../login/index.html">Login</a>
+          </li>
+      </ul>
+      </div>
+  </div>
+  </nav>
+  <br><br><br><br>
+  
+
+<!--FORMULARIO CADRASTRO-->
+
+<form class="row g-3"  name="focad" action="validaremail.php" method="POST">
+
+  <div class="frame-child">
+<div class="pagecadastro">
+
+       <img class="image-1-icon" alt="" src="./public/image-1@2x.png" >
+     <div class="cnl">Cadastre-se no Liver</div>
+     <br>
+    <div class="inserir">Agora, insira uma senha forte para finalizarmos seu cadastro! </div>
+
+<label>
+<div class="senha">Senha:</div>
+      <input type="password" class="barrasenha"  name="txtnova" required>
+        <span class="focus-input100"></span>
+        <span class="symbol-barrasenha2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash-fill" viewBox="0 0 16 16">
+        <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"/>
+        <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z"/></svg></span>
+    
+
+     <div class="confirmar-senha">Confirmar senha:</div>
+      <input type="password" class="barraconfirmar"  name="txtnovaconf" required>
+    <span class="focus-input100"></span>
+    <span class="symbol-confirmarsenha2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash-fill" viewBox="0 0 16 16">
+    <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"/>
+    <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z"/></svg></span>
+
+<div class="e-mail">Confirme seu email:</div>
+      <input type="text" class="barraemail"  name="txtemail" required>
+      <span class="focus-input100"></span>
+      <span class="symbol-barraemail2">
+      <i class="fa fa-envelope" aria-hidden="true"></i></span>
+   
+
+     </label>
+     
+     </div>
+
+     <br>
+<button class="botao1">Cadastrar</button>
+
+<br><br><br>
+
+   <!--Link  para página de Login-->
+
+
+     <div class="conta">Já possui uma conta no Liver?
+        <a class="link"href="../login/index.html"><span>Conecte-se</span></a></div>
+        <br> 
+
+</div>
+
+     
+    </div>
+  </form>
+
+  <div class="img-fundo" data-tilt>
+            
+ <img src="public\Book lover-cuate.png" alt="IMG">
+  
+  </div>
+      <!--FIM DO FORMULARIO CADRASTRO-->
+      
+
+<!--Função ocultar senha-->
+
+      <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const passwordInput = document.querySelector(".barrasenha");
+  const confirmPasswordInput = document.querySelector(".barraconfirmar");
+  const showPasswordIcons = document.querySelectorAll(".bi-eye-slash-fill");
+
+  showPasswordIcons.forEach(icon => {
+    icon.addEventListener("click", function() {
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        confirmPasswordInput.type = "text";
+      } else {
+        passwordInput.type = "password";
+        confirmPasswordInput.type = "password";
+      }
+    });
+  });
+});
+</script>
+  </body>
+</html>

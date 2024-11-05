@@ -1,0 +1,245 @@
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body{
+  min-height: 100vh;
+  
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+  
+/*Estilo da NAVBAR*/
+
+    .navbar-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      margin-top: 0px; 
+      margin-right: 100px;
+    }
+
+    .search-box{
+      position: absolute;
+      top: 50%;
+      left: 90%;
+      transform: translate(-50%, -50%);
+      background: white;
+      height: 30px;
+      border-radius: 20px;
+      padding: 5px; 
+      }
+      
+      .search-box:hover > .search-txt{
+      width: 110px;
+      padding: 0 6px;
+      top: 50px;
+      }
+      
+      .search-btn{
+      position: absolute;
+      color: black;
+      background: yellow;
+      width:20px;
+      height:20px;
+      border-radius: 50%;
+      display: block;
+      }
+      
+      .search-txt{
+      border: none;
+      background: none;
+      outline:none;
+      float: right;
+      padding: 0;
+      font-size: 14px;
+      transition: 1.2s;
+      width: 20px;
+      margin-left:20px;
+      margin-top: -1px;
+      display: block;
+      }
+
+    .navbar {
+      position: fixed;
+      width: 100%;
+      left: 0;
+      background-color: black; 
+    }
+
+
+
+
+
+
+
+th{
+  font-weight:300; font-size:2.6em; text-align:center;
+}
+
+
+.flex-container {
+  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+}
+
+.flex-item {
+
+    flex: 0 0 calc(29.35% - 10px); /* 3 items per row with a little spacing */
+    margin: 15px;
+    padding: 11.7px;
+    border: 1px solid #ccc;
+     border-radius: 32px;
+        border-color: rgb(3, 226, 255) rgb(7, 250, 60);
+        border-top: transparent;
+        border-right: transparent;
+ transition: all 0.3s ease-out;
+ text-align: justify;
+}
+
+.flex-item:hover{
+ transform: translateY(-5px);
+}
+
+.descr {
+    margin-bottom: 10px;
+}
+
+.noobra {
+
+    margin-bottom: 10px;
+
+ text-align: right;
+ white-space: nowrap;
+    background: transparent;
+    font-size: 14px;
+    color: white;
+    font-style: italic;
+    opacity: 0.7;
+
+}
+
+
+.noobrinha{
+
+    margin-bottom: 10px;
+text-decoration: none;
+color: white;
+    float: right;
+
+
+ white-space: nowrap;
+    background: transparent;
+    font-size: 14px;
+    color: white;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.favcit-form {
+    display: flex;
+    justify-content: center;
+
+}
+
+.favcit {
+   
+    color: white;
+    padding: 0px 0px;
+    cursor: pointer;
+    position: relative;
+ transition: color 0.3s; 
+left: 40%;
+
+background: #000000;
+border: 1px solid black;
+
+    transition: color 0.3s
+}
+
+
+.favcitt {
+   
+    color: red;
+    padding: 0px 0px;
+    cursor: pointer;
+    position: relative;
+ transition: color 0.3s; 
+left: 40%;
+top: 50px;
+
+background: #000000;
+border: 1px solid black;
+
+    transition: color 0.3s
+}
+
+
+.favcit:hover i {
+   color: #ff0000; 
+ }
+
+
+
+
+
+#mostrar{
+  position: absolute;
+  display: none;
+}
+
+#passar_mouse:hover #mostrar{
+  display:block;
+  font-size: 1.5vh;
+  color: white;
+  background: rgb(105, 101, 101);
+  padding: 3px;
+  margin-top: 18px;
+  }
+
+
+@media(max-width:1200px){
+
+  .flex-item {
+
+    flex: 0 0 calc(46.35% - 10px); /* 3 items per row with a little spacing */
+    margin: 15px;
+    padding: 11.7px;
+    border: 1px solid #ccc;
+     border-radius: 32px;
+        border-color: rgb(3, 226, 255) rgb(7, 250, 60);
+        border-top: transparent;
+        border-right: transparent;
+ transition: all 0.3s ease-out;  
+
+}
+}
+
+
+
+
+@media(max-width:800px){
+ .flex-item {
+
+    flex: 0 0 calc(95.35% - 10px); /* 3 items per row with a little spacing */
+    margin: 15px;
+    padding: 11.7px;
+    border: 1px solid #ccc;
+     border-radius: 32px;
+        border-color: rgb(3, 226, 255) rgb(7, 250, 60);
+        border-top: transparent;
+        border-right: transparent;
+ transition: all 0.3s ease-out;  
+
+}
+
+}
+

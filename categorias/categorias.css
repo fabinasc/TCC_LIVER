@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  .content-main {
+    margin-bottom: 150px; /* Ajuste a altura conforme necessário */
+  }
+  
+  /*Estilo da NAVBAR*/
+  
+      .navbar-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin-top: 0px; 
+        margin-right: 100px;
+      }
+  
+      .search-box{
+        position: absolute;
+        top: 50%;
+        left: 90%;
+        transform: translate(-50%, -50%);
+        background: white;
+        height: 30px;
+        border-radius: 20px;
+        padding: 5px; 
+        }
+        
+        .search-box:hover > .search-txt{
+        width: 110px;
+        padding: 0 6px;
+        top: 50px;
+        }
+        
+        .search-btn{
+        position: absolute;
+        color: black;
+        background: yellow;
+        width:20px;
+        height:20px;
+        border-radius: 50%;
+        display: block;
+        }
+        
+        .search-txt{
+        border: none;
+        background: none;
+        outline:none;
+        float: right;
+        padding: 0;
+        font-size: 14px;
+        transition: 1.2s;
+        width: 20px;
+        margin-left:20px;
+        margin-top: -1px;
+        display: block;
+        }
+  
+      .navbar {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        background-color: black; 
+      }
+     
+
+      @media (max-width: 767px){
+        .navbar-nav {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          margin-top: 0px; 
+          margin-right: 100px;
+        }
+    
+        .search-box{
+          position: absolute;
+          top: 0%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: white;
+          height: 30px;
+          border-radius: 20px;
+          margin-left: 0%;
+          }
+
+      }
+      @media (max-width: 1024px) {
+        /* Seus estilos para tablets aqui*/
+        .navbar-nav {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          margin-top: 0px; 
+          margin-right: 100px;
+        }
+    
+        .search-box{
+          position: absolute;
+          top: 14px;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: white;
+          height: 30px;
+          border-radius: 20px;
+          margin-top: 5%;
+          margin-left: 0%;
+          }
+      }
+      @media (max-width: 375px) {
+        /* Seu código CSS para estilos específicos de telas menores, como o iPhone, aqui */
+        .search-box{
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: white;
+          height: 30px;
+          border-radius: 20px;
+          margin-top: 7%;
+          margin-left: 0%;
+          }
+    }
+
+/* cards categorias, geral */
+.card {
+  border-radius: 10px;
+  margin-bottom: 5%; /* Margem inferior de 2% */
+  width: 100%; 
+  margin-left: 160px; /* Margem esquerda de 2% */
+
+}
+
+ /* Estilos para a div com classe "col" (para cada card) */
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos para a div com classe "row row-cols-3 g-3" */
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Ajuste o tamanho mínimo e máximo e defina "1fr" */
+  gap: 0px;
+  justify-content: center; /* Centraliza horizontalmente */
+  max-width: 100%; /* Ajusta a largura ao tamanho da tela */
+  width: 100%; /* Ajusta a largura ao tamanho da tela */
+  left: 50px;
+  right: 0%;
+}
+
+/* Estilos para a div com classe "card" (para cada card) */
+.card {
+  position: relative;
+  background: none; /* Remove o fundo */
+  border: none; /* Remove a borda */
+  
+}
+
+.card .card-img-top:hover {
+  border: 4px solid MediumBlue;
+}
+
+.card .card-img-top {
+  width: 100%; 
+  height: auto; 
+  max-height: 100%; /* Garante que a imagem não ultrapasse a altura do card */
+  transition: transform 0.7s; /* Adiciona uma transição suave para o efeito de hover */
+}
+
+.card .card-title {
+  font-size: 1.15rem;
+  color: white;
+  
+
+}
+
+.custom-title {
+  position: relative;
+  display: contents;
+}
+
+
+/* Ajuste para telas maiores (computador) */
+@media (min-width: 768px) {
+
+  .card{
+    position: relative;
+    left: 0px;
+    right: 0px;
+
+  }
+  .card .card-img-top {
+    width: 350%; /* Ajuste o tamanho conforme necessário para telas maiores */
+  }
+
+  
+}
+
+@media (min-width: 768px) {
+  .card{
+    position: relative;
+    left: 50px;
+    right: 50px;
+    display: flex;
+
+  }
+  .card .card-img-top {
+    width: 250%; /* Ajuste o tamanho conforme necessário para telas maiores */
+  }
+  
+}
+@media (min-width: 1920px){
+  .card{
+    position: relative;
+    left:360px;
+    display: flex;
+
+  }
+  .card .card-img-top {
+    width: 300%; /* Ajuste o tamanho conforme necessário para telas maiores */
+  }
+}
+@media (min-width: 500px) and (max-width: 800px) {
+  .row {
+    grid-template-columns: repeat(2, 1fr); /* Exibir as obras em duas colunas */
+  }
+}
+
+@media (min-width: 1600px){
+  .card{
+    position: relative;
+    left:260px;
+    display: flex;
+
+  }
+
+}
