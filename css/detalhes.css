@@ -1,0 +1,589 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body{
+  background-color: black; 
+  color: white; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+	--main-color:rgb(177, 185, 157);
+	--border-color:rgb(56, 68, 77);
+	--shadow-color:rgba(29, 161, 242, 0.1);
+  --twitter-background: #e7de89;
+}
+
+/*Estilo da NAVBAR*/
+
+    .navbar-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      margin-top: 0px; 
+      margin-right: 100px;
+    }
+
+    .search-box{
+      position: absolute;
+      top: 50%;
+      left: 90%;
+      transform: translate(-50%, -50%);
+      background: white;
+      height: 30px;
+      border-radius: 20px;
+      padding: 5px; 
+      }
+      
+      .search-box:hover > .search-txt{
+      width: 110px;
+      padding: 0 6px;
+      top: 50px;
+      }
+      
+      .search-btn{
+      position: absolute;
+      color: black;
+      background: yellow;
+      width:20px;
+      height:20px;
+      border-radius: 50%;
+      display: block;
+      }
+      
+      .search-txt{
+      border: none;
+      background: none;
+      outline:none;
+      float: right;
+      padding: 0;
+      font-size: 14px;
+      transition: 1.2s;
+      width: 20px;
+      margin-left:20px;
+      margin-top: -1px;
+      display: block;
+      }
+
+    .navbar {
+      position: fixed;
+      width: 100%;
+      left: 0;
+      background-color: black; 
+    }
+
+
+/*ESTILO DESCRIÇÃO*/
+
+/*estrelas avaliação*/
+
+.estrelas input[type=radio]{
+	display: none;
+}.estrelas label i.fa:before{
+	content: '\f005';
+	color: #FC0;
+}.estrelas  input[type=radio]:checked  ~ label i.fa:before{
+	color: #CCC;
+}
+ 
+.estrela{
+  margin-top: -5%;
+  margin-bottom: 0px;
+}
+/*enviar estrela*/
+.custom-button {
+  border-radius: 20px; /* Define o raio da borda */
+  background-color: black; /* Define a cor de fundo */
+  border: 1px solid white; /* Define a borda branca */
+  color: white; /* Define a cor do texto */
+  padding: 10px 20px; /* Define o espaçamento interno */
+  font-size: 14px; /* Define o tamanho da fonte */
+  margin-top: -20px;
+}
+
+
+/*botões*/
+#favs, #verdps {
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  margin: 10px;
+  color: black;
+ 
+  
+}
+.button-container button:hover {
+  box-shadow: 0 0 40px rgba(39, 16, 243, 0.7); /* Cria um sombreado amarelo ao passar o cursor */
+}
+
+
+
+/* telas a partir de 1000px */
+@media (min-width: 1000px) {
+  .img-fluid {
+      position: absolute;
+      left: 13%;
+      max-width: 300px;
+      margin-top: 90px;
+      top: 0px;
+      margin-bottom: 0%;
+      text-align: center;
+  }
+  .col-md-8 {
+      position: relative;
+      text-align: justify;
+      left: 420px;
+      top:25px;
+  }
+  .button-container {
+      overflow: auto; /* Limpa os floats */
+  }
+  button {
+      float: left;
+  }
+}
+
+/* telas menores, como smartphones */
+@media (max-width: 999px) {
+  .img-fluid {
+      position: static; /* Remove a posição absoluta */
+      max-width: 100%; /* Certifique-se de que a imagem não ultrapasse a largura da tela */
+      margin-top: 10px; /* Ajuste a margem superior de acordo com sua preferência */
+      text-align: center;
+      margin-bottom: 0%;
+  }
+  .col-md-8 {
+      position: static; /* Remova a posição relativa */
+      text-align: justify;
+  }
+  .button-container {
+      text-align: center; /* Centralize os botões na tela pequena */
+  }
+  button {
+      float: none; /* Remova o float para que os botões fiquem um abaixo do outro */
+      display: block; /* Exiba os botões como blocos para centralização */
+      margin: 0px auto; /* Centralize os botões horizontalmente com uma margem superior/inferior */
+  }
+}
+
+  .button-container button {
+    padding: 12.5px 30px;
+    margin: 10px; /* Adicionei margem para espaçamento entre os botões */
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 100px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    transition: all 0.5s;
+    position: relative;
+    height: 5%;
+  }
+  
+  /*responsivo*/
+  #conteiner-fluid{
+    position: relative;
+  }
+  
+ /* Timeline resenha*/
+ .custom-hr-container hr:last-child {
+  text-align: center; /* Centraliza a linha horizontal na div */
+  margin-top: 9%; /* Define a margem acima da linha */
+  margin-bottom: 15px; /* Define a margem abaixo da linha */
+}
+
+.custom-hr {
+  border: none; /* Remove a borda padrão da linha */
+  border-top: 2px solid #ffffff; /* Estilo da linha (2px de espessura, preta no exemplo) */
+}
+#container-resenha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#frase-resenha {
+    margin: 5px;
+}
+
+#container-res {
+  margin-left: 25%;
+  max-width: 680px;
+  margin: 0 auto; /* Centraliza o contêiner */
+
+ 
+}
+
+#content-res {
+  border: 1px solid;
+  border-top: none;
+  border-color: aliceblue;
+}
+
+#resenha {
+  text-decoration: none;
+  display: relative;
+  border-bottom: 1px solid var(--twitter-background);
+}
+
+#resenha-nome {
+  position: absolute;
+  color: red;
+  left: 100px;
+  text-decoration: none;
+  margin: 10px;
+}
+
+#res {
+  word-break: break-word;
+  font-size: 16px;
+  color: white;
+  padding: 50px;
+  margin: 5px;
+}
+
+
+/*timiline citações*/
+
+#botao-res3{
+  position: relative;
+  font-size: 16px;
+  width: 9%;
+  height:10px;
+  font-weight: 10px;
+  border: none;
+  border-radius: 30px;
+  background-color:transparent;
+  color: none;
+  text-decoration: none; /* Remove a sublinhado */
+  margin-left: 17.5%;
+  margin-top: -16.5%;
+  text-decoration: solid;
+}
+.txt-citacao {
+  margin-top: 10px;
+  color: white;
+  text-align: justify;
+}
+.citacao-container {
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px ;
+  background-color:#101a42;
+  margin-top: 3%;
+  min-height: 140px; /* Defina a altura mínima desejada */
+  
+  
+}
+
+
+.citacao-header {
+  display: flex;
+  align-items: center;
+}
+
+#container-citacao {
+  position: relative;
+  margin-left: 15%;
+  max-width: 580px;
+  margin-top: -2%;
+}
+
+
+#logado-citacao {
+  text-decoration: none;
+  font-size: 27px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  padding: 25px;
+  margin: 10px;
+  margin-left: 0%;
+  letter-spacing: 2px;
+}
+
+#frase-citacao2 {
+  background-color: rgba(43, 42, 42, 0.521); /* Cor de fundo */
+  border: none; /* Borda cinza */
+  border-radius: 15px; /* Bordas arredondadas */
+  padding: 10px; /* Espaçamento interno */
+  margin: 27px 0px; /* Margem superior e inferior para separar de outros elementos */
+  margin-left: 25%;
+  text-align: center; /* Alinhar o conteúdo ao centro */
+  width: 50%;
+}
+
+#logado-citacao2 {
+  font-size: 16px;
+  color:white; /* Cor do texto */
+  margin: 0; /* Remover margem superior e inferior do texto */
+}
+#botao-cit {
+  position: relative;
+  font-size: 16px;
+  width: 20%;
+  height: 40px;
+  border-radius: 30px;
+  background-color: black; /* Define a cor de fundo para preto */
+  color: white; /* Define a cor do texto para branco */
+  text-decoration: none; /* Remove a sublinhado */
+  border: 1px solid white; /* Adiciona uma borda branca de 2px */
+  margin-top: -6%;
+  left: 30%;
+  text-decoration: solid;
+}
+.favcit{
+  margin-top: 2%;
+}
+
+
+
+/*nav citações*/
+.custom-nav {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  background-color: #141414; /* Cor de fundo da barra de navegação */
+  border-radius: 8px; /* Borda arredondada */
+  
+}
+
+
+.custom-nav-link {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.custom-nav-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.custom-nav-link:hover,
+.custom-nav-link.active {
+  color: #f8f8f8;
+}
+
+.custom-nav-link.active::after {
+  background-color: #fff; /* Cor da barra branca na aba ativa */
+}
+/* Para quando estiver ou não logado */
+
+#not-res {
+  word-break: break-word;
+  font-size: 16px;
+  color: white;
+  padding: 50px;
+  margin: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Poppins', sans-serif;
+  left: 30px;
+}
+
+#login-res {
+  text-decoration: none;
+  font-size: 27px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  padding: 25px;
+  margin: 20px;
+  letter-spacing: 2px;
+}
+
+#logado-res {
+  text-decoration: none;
+  font-size: 27px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  padding: 25px;
+  margin: 20px;
+  letter-spacing: 2px;
+}
+
+#botao-res {
+  position: relative;
+  font-size: 16px;
+  width: 30%;
+  height: 40px;
+  font-weight: 700;
+  border: none;
+  border-radius: 30px;
+  background-color: black; /* Define a cor de fundo para preto */
+  color: white; /* Define a cor do texto para branco */
+  text-decoration: none; /* Remove a sublinhado */
+  border: 1px solid white; /* Adiciona uma borda branca de 2px */
+  margin-left: 33%;
+  margin-top: -8%;
+  text-decoration: solid;
+}
+
+/*botão login quando usuario vê resenha sem está logado*/
+#botao-res2{
+  position: relative;
+  font-size: 16px;
+  width: 9%;
+  height: 40px;
+  font-weight: 10px;
+  border: none;
+  border-radius: 30px;
+  background-color: black; /* Define a cor de fundo para preto */
+  color: rgb(2, 2, 2); /* Define a cor do texto para branco */
+  text-decoration: none; /* Remove a sublinhado */
+  margin-left: 86%;
+  margin-top: -16.5%;
+  text-decoration: solid;
+}
+
+
+
+button {
+  font-size: 14px; /* Reduz o tamanho da fonte */
+  padding: 5px 10px; /* Reduz o espaçamento interno */
+  height: 30px; /* Reduz a altura do botão */
+  border-radius: 15px; /* Reduz o raio da borda para uma aparência mais arredondada */
+}
+.comentar-button{
+  background-color: transparent;
+  color: none;
+  border: none;
+}
+
+.fa-heart {
+  font-size: 18px; /* Reduz o tamanho do ícone */
+  margin-left: 5px; /* Espaço à esquerda do ícone */
+}
+
+/*resenha*/
+.resenha-container {
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  background-color:rgba(0, 0, 0, 0.856); /* Cor branca com 70% de opacidade */
+  margin-top: 3%;
+  margin-bottom: 10%;
+  border-top: 2px solid #101a42; /* Adiciona apenas a borda superior */
+
+}
+
+.resenha-header {
+  display: flex;
+  align-items: center;
+}
+
+.nome-usuario {
+  font-weight: bold;
+  margin-right: 10px;
+  color: white;
+  text-decoration: none; /* Remove a sublinhado */
+  margin-top: 10px;
+}
+
+.txt-resenha {
+  margin-top: 10px;
+  color: white;
+  text-align: justify;
+  margin-top: 2%;
+  margin-bottom: 3%;
+  
+}
+
+.curtir-container {
+  display: flex;
+  align-items: center;
+}
+
+.curtir-button {
+  font-size: 14px;
+  padding: 3px 8px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  border-radius: 30px;
+  border: 2px solid var(--main-color);
+  transition: background-color 0.3s, color 0.3s;
+  align-items: flex-start; /* Alinhe os elementos à esquerda */
+  border: none
+ 
+
+}
+
+.fa-heart {
+  font-size: 15px;
+  color: red; /* Cor do coração */
+  margin-left: 5px; /* Espaço à esquerda do ícone */
+}
+
+@media (max-width: 600px){
+  #container-res {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 1900px){
+  #container-res {
+    margin-left: 35%;
+  }
+  
+}
+
+.comentar{
+  display: flex;
+  margin:20%;
+}
+
+/*Comentário*/
+.comment-balloon {
+  position: relative;
+  background-color: #0a0c16;
+  border-radius: 10px; /* Bordas arredondadas */
+  padding: 10px; /* Espaçamento interno */
+  margin: 35px 0; /* Margem superior e inferior para separar os comentários */
+  max-width: 55%; /* Largura máxima para evitar que o comentário se estenda muito */
+  margin-left: 40%;
+  color: #fffcfc;
+
+}
+
+
+.options {
+  top: 5%;
+}
+
+.comment-balloon p {
+  font-size: 16px;
+  color: #ffffff; /* Cor do texto */
+  margin: 0; /* Remover margem superior e inferior do texto */
+  margin-bottom: 5%;
+
+}
+
+/*lixinho*/
+
+
+#frase-coment {
+color:none
+}
+
+#logado-coment {
+  font-size: 16px;
+  color: white;
+  margin: 0;
+}
+
+

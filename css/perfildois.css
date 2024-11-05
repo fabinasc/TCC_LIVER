@@ -1,0 +1,403 @@
+/* Importa fontes do Google */
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700|Source+Sans+Pro:300,400,600,700&display=swap");
+
+/* Estilos gerais para o corpo do documento */
+body{
+  background-color: black;
+  color:white;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Estilos para a barra de navegação (.navbar-nav) */
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 0px; 
+    margin-right: 100px;
+  }
+.container-nav{
+    margin-left: 15% ;
+}
+/* Estilos para a caixa de pesquisa (.search-box) dentro da navbar*/
+  .search-box{
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    background: white;
+    height: 30px;
+    border-radius: 20px;
+    padding: 5px; 
+    }
+    
+    .search-box:hover > .search-txt{
+    width: 110px;
+    padding: 0 6px;
+    top: 50px;
+    }
+    
+    .search-btn{
+    position: absolute;
+    color: black;
+    background: yellow;
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    display: block;
+    }
+    
+    .search-txt{
+    border: none;
+    background: none;
+    outline:none;
+    float: right;
+    padding: 0;
+    font-size: 14px;
+    transition: 1.2s;
+    width: 20px;
+    margin-left:20px;
+    margin-top: -1px;
+    display: block;
+    }
+
+  .navbar {
+    position: fixed;
+    width: 100%;
+    left: 0;
+
+  }
+/* Estilos para o contêiner principal (.container) */
+.container {
+ background-color: black;
+ display: flex;
+ max-width: 1900px;
+ height: 100vh;
+ margin: 0 auto;
+}
+/* Estilos para o contêiner principal da área de conteúdo (.main-container) */
+.main-container {
+ padding: 50px;
+ flex-grow: 1;
+ background-color: black;
+}
+
+/* Estilos para o perfil (.profile) */
+.profile {
+ position: relative;
+ height: 40vh;
+ min-height: 250px;
+ max-height: 350px;
+ z-index: 1;
+}
+/* Estilos para a capa do perfil (.profile-cover) */
+.profile-cover{
+ position: absolute;
+  width: 55%;
+  left:23%;
+  
+}
+/* Estilos para o avatar do perfil (.profile-avatar) */
+.profile-avatar {
+
+    align-items: center;
+    display: flex;
+    z-index: 1;
+    bottom: 16px;
+    left: 32px;
+    top: 90px;
+   }
+/* Estilos para a imagem do perfil (.profile-img) */
+.profile-img {
+ position: relative;
+ width: 12%;
+ border-radius: 50%;
+ object-fit: cover;
+ margin-top: 15%;
+ margin-left: 18%;
+}
+/* Estilos para o nome do perfil (.profile-name) */
+.profile-name {
+  position: absolute;
+   display: flex;
+   margin-top: 14%;
+   margin-left: 35%;
+   margin-bottom: 24px;
+   font-size: 2.6vh;
+   color: #fff;
+   font-weight: 600;
+   white-space: nowrap;
+  }
+  /* Estilos para o nome de usuário do perfil (.username) */
+  .username{
+   position: absolute;
+   margin-top: 16%;
+   left: 35%;
+   font-size: 2.3vh;
+   color: rgba(255, 255, 255, 0.534);
+   font-weight: 400;
+  }
+  /* Estilos para a seção de biografia (.bio) */
+  .bio{
+   position: absolute;
+   width: 350px;
+   margin-top: 25%;
+   margin-left: 35%;
+   font-size: 2.2vh;
+   color: white;
+  }
+
+/* Estilos para a seção de resenhas (.box) */
+.box {
+  max-width: 100%; /* Para tornar responsivo */
+  font-size: 2.4vh;
+}
+
+/* Estilos para a borda da seção de resenhas (.borda) */
+.borda{
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.596);
+  background-color: #1c1c253f;
+  margin-bottom: -40px;
+  padding: 30px;
+}
+/* Estilos para a posição dos elementos na seção de resenhas (.position) */
+.position {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 10%;
+}
+/* Estilos para a imagem de status na seção de resenhas (.status-img) */
+.status-img {
+  width: 13%;
+  margin-right: 20px;
+  margin-top: -10%;
+}
+/* Estilos para a seção de álbuns (.album) */
+.album {
+  padding-top: 20px;
+  margin-top: 20px;
+  width: 820px;
+}
+
+/* Estilos para os detalhes do álbum (.album-detail) */
+.album-detail{
+ margin-left: 15%;
+ padding: 10px;
+}
+/* Estilos para o título do álbum (.album-title) */
+.album-title{
+  position: relative;
+  font-size: 2.9vh;
+  font-weight: 500;
+  top: 40px;
+}
+/* Estilos para a data do álbum (.album-date) */
+.album-date{
+  position: relative;
+  font-size: 2.1vh;
+  top: 50px;
+  color: rgba(255, 255, 255, 0.568);
+}
+
+.album-content .resenha-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.album-content.partial .resenha-text {
+  -webkit-line-clamp: unset;
+}
+.ver-mais-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 2vh;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.473);
+  color: rgb(169, 195, 250);
+  font-weight: 600;
+  margin-left: 87%;
+}
+
+.ver-mais-btn:hover {
+  color: #bfc3ff;
+}
+
+/* Ajustes responsivos */
+@media screen and (max-width: 768px) {
+  .position {
+      margin-top: 2%; /* Ajuste para telas menores */
+      margin-left: 5%;
+  }
+
+  .status-img {
+      width: 60px; /* Ajuste para telas menores */
+      height: 60px; /* Ajuste para telas menores */
+      margin-right: 10px; /* Ajuste para telas menores */
+  }
+}
+
+/* Estilos adicionais para telas menores */
+@media screen and (max-width: 480px) {
+  .status-img {
+      width: 50px; /* Ajuste para telas ainda menores */
+      height: 50px; /* Ajuste para telas ainda menores */
+      margin-right: 10px; /* Ajuste para telas ainda menores */
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .left-side-button {
+  display: none;}
+.left-side{
+  display: none;
+}
+  .side-menu{
+    display: none;
+  }
+
+}
+ 
+@media screen and (max-width: 700px) {
+ .profile-avatar {
+  top: -25px;
+  left: 50%;
+  transform: translatex(-50%);
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+ }
+ .profile-img {
+  height: 100px;
+  width: 100px;
+ }
+ .profile-name {
+  margin: 5px 0;
+ }
+ .profile-menu-position{
+  width: 100%;
+ }
+ .profile-menu {
+
+  margin-left: 50%;
+
+  max-width: 850px;
+  overflow: auto;
+
+ }
+ .profile-menu-link {
+  padding: 16px;
+  font-size: 10px;
+ }
+}
+
+@media screen and (max-width: 480px) {
+
+  .profile-menu-position {
+    margin-top: 90%;
+    padding-top: 20%;
+    left: -60%;
+    width: 470px;
+    height: 110px;
+   }
+   
+
+ .profile-avatar {
+  top: -25px;
+  left: 50%;
+  transform: translatex(-50%);
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+ }
+ .profile-img {
+  width: 65px;
+  height: 65px;
+  margin-top: 15%;
+ }
+
+ .profile-name{
+  font-size: 12px;
+  margin-left: 78%;
+  margin-top: 14%;
+ }
+
+ .username{
+  font-size: 12px;
+  margin-left: 40%;
+  margin-top: 25%;
+ }
+
+ .bio{
+  font-size: 12px;
+  margin-left: 100%;
+  margin-top: 50%;
+
+  width: 250px;
+ }
+
+}
+
+/* estilo do botão para seguir o usuário*/
+.btn-user{
+  position: absolute;
+  margin-top: 10%;
+  left: 65%;
+  font-size:2vh;
+    width:10%;
+    height:55px;
+    font-weight:500;
+    border:none;
+    border-radius:10px;
+    background-color: #1b1d2e;
+    color: white;
+  padding: 15px;
+  }
+  
+  
+  .btn-user:hover{
+    background-color: #212230;
+    
+  }
+  #btn-user{
+    position: absolute;
+    margin-top: 10%;
+    left: 65%;
+    font-size:2vh;
+      width:10%;
+      height:55px;
+      font-weight:500;
+      border:none;
+      border-radius:10px;
+      background-color: #1b1d2e;
+      color: white;
+    padding: 15px;
+    }
+
+/* pra quando nao tiver foto*/
+
+#foto-capa{
+  position: absolute;
+  width: 55%;
+  left:23%;
+  height: 33vh;
+  background-color: rgba(159, 161, 179, 0.849);
+}
+
+#foto-perfil{
+  position: relative;
+  width: 12%;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 15%;
+  margin-left: 18%;
+  background-color: rgb(159, 161, 179);
+  padding: 12px;
+}
+

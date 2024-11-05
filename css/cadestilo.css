@@ -1,0 +1,320 @@
+/* Estilo geral do corpo da pagina*/
+body{
+  background: url(../imagens/Img_fundo/fundoescuro.png);  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/*da primeira parte */
+/* centraliza a posição dos elementos*/
+.box-cad{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* estiliza o card principal*/
+.box-cad-filha{
+  position: absolute;
+  top:330px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+  background-color: #101011da;
+  width: 450px; 
+  height: 320px;
+  border: 2px solid #f5f5f536;
+}
+
+/* centraliza o card*/
+.position-cad{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* estiliza o titulo */
+.titulo-cad{
+  font-weight: bold;
+  font-size: 2.6vw; 
+  letter-spacing: 3px;
+  color: white;
+}
+
+/* estiliza o titulo de dentro do card */
+.titulo-cat{
+  font-size: 25px;
+  letter-spacing: 3px;
+  color: white;
+  font-weight: 300;
+}
+
+/* Definição de cores*/
+:root {
+    --background-gradient: linear-gradient(30deg, #f39c12 30%, #f1c40f);
+    --gray: #343a3fcc;
+    --darkgray: #51584d;
+    --grayy: #647269;
+    --green: rgba(89, 99, 93, 0.589);
+    
+  }
+
+/* Configuração da barra de progresso */
+.progressbar {
+  counter-reset: step; /* reinicia o contador utilizado nas etapas da barra de progresso */
+}
+
+/* Estilo para cada item (etapa) na barra de progresso */
+.progressbar li {
+  position: relative;
+  list-style: none; /* remove a estilização padrão da lista */
+  float: left; /* alinha as etapas horizontalmente */
+  width: 22%; /* define a largura de cada etapa na barra de progresso */
+  text-align: center; /* centraliza o texto dentro de cada etapa */
+  color: white; /* define a cor do texto como branco */
+  left: 15%; /* ajusta o espaçamento entre as etapas */
+}
+
+/* Adiciona um número dentro de cada etapa */
+.progressbar li:before {
+  content: counter(step); /* exibe o número da etapa */
+  counter-increment: step; /* incrementa o contador para a próxima etapa */
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border: 4px solid #ddd;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: .8em;
+  font-weight: bolder;
+}
+
+/* Adiciona uma linha após cada etapa, exceto a primeira */
+.progressbar li:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #ddd;
+  top: 15px;
+  left: -50%;
+  z-index: -1;
+}
+
+/* Remove a linha após a primeira etapa */
+.progressbar li:first-child:after {
+  content: none;
+}
+
+/* Estilo para uma etapa ativa (completada) na barra de progresso */
+.progressbar li.active {
+  color: #3cc619; /* define a cor do texto para uma etapa ativa */
+}
+
+/* Estilo para o ícone de confirmação em uma etapa ativa */
+.progressbar li.active:before {
+  font-family: FontAwesome; /* usa a fonte FontAwesome para o ícone */
+  border-color: #3cc619;
+  background-color: #3cc619;
+  color: #fff;
+  content: "\f00c"; /* código do ícone de confirmação */
+  -webkit-transition: background-color 500ms ease-out 1s;
+  -moz-transition: background-color 500ms ease-out 1s;
+  -o-transition: background-color 500ms ease-out 1s;
+  transition: background-color 500ms ease-out 1s;
+}
+
+/* Adiciona uma linha colorida após uma etapa ativa */
+.progressbar li.active + li:after {
+  background-color: #3cc619;
+}
+  
+  select {
+    /* Reset Select */
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    /* Personalize */
+    flex: 1;
+    padding: 0 1em;
+    color: #fff;
+    background-color: var(--darkgray);
+    background-image: none;
+    cursor: pointer;
+   
+  }
+
+  /* Remove IE arrow */
+  select::-ms-expand {
+    display: none;
+  }
+  /* Custom Select wrapper */
+  .select {
+    position: relative;
+    display: flex;
+    width: 10em;
+    height: 3em;
+    border-radius: .25em;
+    overflow: hidden;
+    left:100px;
+    top:30px;
+  }
+  /* Arrow */
+  .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    background-color: #606960;
+    transition: .25s all ease;
+    pointer-events: none;
+  }
+  /* Transition */
+  .select:hover::after {
+    color: #f39c12;
+
+  }
+
+ /* Estilo para o botão de confirmação (.conf) */
+.conf {
+  position: relative; /* define a posição relativa ao elemento pai */
+  left: 230px; /* desloca o botão para a direita */
+  width: 100px; /* define a largura do botão */
+  background-color: var(--darkgray); /* define a cor de fundo usando uma variável CSS */
+  color: white; /* define a cor do texto como branco */
+  border: 0 none; /* remove a borda do botão */
+  border-radius: 5px; /* define o raio da borda do botão */
+  cursor: pointer; /* altera o cursor para indicar interatividade */
+  padding: 10px; /* adiciona preenchimento interno ao botão */
+  margin: 10px 5px; /* define as margens do botão */
+  text-decoration: none; /* remove sublinhado de links */
+  font-size: 14px; /* define o tamanho da fonte do texto */
+  top: 30px; /* posiciona o botão 30 pixels abaixo do topo */
+}
+
+/* Efeito de hover para o botão de confirmação */
+.conf:hover {
+  background-color: var(--grayy); /* altera a cor de fundo ao passar o mouse sobre o botão */
+}
+
+/* Estilo para um elemento com id "conf-position" */
+#conf-position {
+  position: relative; /* define a posição relativa ao elemento pai */
+  left: 180px; /* desloca o elemento para a direita */
+}
+
+/* Estilos aplicados quando a largura da tela é no máximo 1920 pixels */
+@media (max-width: 1920px) {
+  /* Ajustes para a posição da caixa de cadastro */
+  .box-cad-filha {
+    position: absolute; /* posiciona a caixa de cadastro de forma absoluta */
+    top: 430px; /* ajusta a posição vertical da caixa de cadastro */
+  }
+
+  /* Ajustes para a posição vertical das etapas na barra de progresso */
+  .progressbar li {
+    position: relative; /* define a posição relativa */
+    top: 120px; /* ajusta a posição vertical das etapas */
+  }
+
+  /* Ajustes para a posição vertical do título do cadastro */
+  .titulo-cad {
+    position: relative; /* define a posição relativa */
+    top: 80px; /* ajusta a posição vertical do título */
+  }
+}
+/* da segunda parte*/
+
+.formulario-cad{
+  position: absolute;
+  top:55%;
+  left: 25%;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex: 1 1 100%;
+  align-items: stretch;
+  justify-content: space-between;
+  color:white;
+  white-space: nowrap;
+}
+/* Estilos para a primeira coluna do formulário (.primeira-col) */
+.primeira-col{
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 330px;
+  max-height: 400px;
+  background-color: #101011;
+  padding: 35px;
+  margin: 80px 50px;
+}
+/* Estilos para a pré-visualização de algum conteúdo (#preview) */
+#preview{
+  position: relative;
+  left: 45px;
+  width: 100%;
+  max-height: 250px;
+}
+/* Estilos para o ícone (#icon) */
+   #icon{
+     position: absolute;
+     top:300px;
+     left: 198px;
+     outline: none;
+   }
+   /* Efeito de hover para o ícone */
+  #icon:hover{
+  color:var(--grayy);
+}
+/* Estilos para a coluna de sinopse (.sinopse-col) */
+.sinopse-col{
+  position: absolute;
+  top: 500px;
+  width: 50%;
+  background-color: #101011da;
+  padding:18px;
+}
+/* Estilos para a área de auto-redimensionamento (#autoresizing) */
+#autoresizing{
+  overflow: hidden;
+  outline: none;
+  width: 380px;
+  height: 150px;
+  border-radius: 4px;
+  background-color: rgba(243, 240, 240, 0.541) ;
+   border: 2px solid #28302b;  
+        outline: none;
+        &:focus{
+      border: 2px solid rgba(198, 238, 198, 0.616);
+        }
+}
+/* Estilos para a segunda coluna do formulário (.segunda-col) */
+.segunda-col{
+  width: 50%;
+  background-color: #101011da;
+  padding: 50px;
+  
+}
+/* Estilos para campos de entrada (.input) */
+.input{
+    width: 300px;
+    padding: 6px;
+    margin-top: 8px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgba(243, 240, 240, 0.541) ;
+      border: 2px solid #28302b;  
+        outline: none;
+        &:focus{
+      border: 2px solid rgba(198, 238, 198, 0.616);
+        }
+      }
